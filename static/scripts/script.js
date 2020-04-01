@@ -39,6 +39,14 @@ class Calculator {
     this.currentOut = this.currentOut.toString() + number.toString();
   }
   
+  validOperation() {
+    if (this.operation !== undefined && this.currentOut !== "") {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
   // Define operation when a corresponding mathematical operation is selected
   chooseOperation(operation) {
     if (this.currentOut === "") return;
@@ -170,14 +178,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Simulate equals button click
   equalsButton.addEventListener("click", button => {
-    calculator.compute();
-    calculator.updateDisplay();
-    stringBuilder.push(" = ", currentOutTextElement.innerText.replace(/,/g, ""));
-    // Post operation to server which will be fanned out to all the clients connected
-    socket.send(stringBuilder.join(""))
-    stringBuilder = new Array();
-    stringBuilder.push(currentOutTextElement.innerText.replace(/,/g, ""));
-    localStorage.setItem("pastCalc", stringBuilder.join(""));
+    if (calculator.validOperation()) {
+      calculator.compute();
+      calculator.updateDisplay();
+      stringBuilder.push(" = ", currentOutTextElement.innerText.replace(/,/g, ""));
+      // Post operation to server which will be fanned out to all the clients connected
+      socket.send(stringBuilder.join(""))
+      stringBuilder = new Array();
+      stringBuilder.push(currentOutTextElement.innerText.replace(/,/g, ""));
+      localStorage.setItem("pastCalc", stringBuilder.join(""));
+    }
   });
 
   // Simulate delete button click
