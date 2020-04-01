@@ -23,3 +23,9 @@ This is a standard calculator application, implemented using Flask-SocketIO with
 
 ### Run app
 Use [the link to the production server](https://calculator-logs.herokuapp.com/) directly.
+
+## Further modifications
+- Add user-based login system
+- Add feature: Delete calculation log
+- Add feature: Users can delete logs which have been posted by them, or can raise a request to be delete
+- Additional mathematical operations can be added
