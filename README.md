@@ -7,6 +7,7 @@ This is a standard calculator application, implemented using Flask-SocketIO with
 - Supports basic mathematical operations: +, -, * and /
 - Reports a real-time log of all the past calculations carried out different users connected to the system
 - A calculation gets shared automatically with all the connected users once the user presses the = button with a valid calculation
+- For calculation logs with multiple operators, the associativity follows from left to right
 
 ## Files in the program
 - **application.py**: This is the main app file and contains the Flask-SocketIO backend for the app.
