@@ -6,10 +6,10 @@ This is a standard calculator application, implemented using Flask-SocketIO with
 ## Features
 - Supports basic mathematical operations: +, -, * and /
 - Reports a real-time log of all the past calculations carried out different users connected to the system
-- The calculation gets shared automatically with all the connected users once the user presses the = button with a valid calculation
+- A calculation gets shared automatically with all the connected users once the user presses the = button with a valid calculation
 
 ## Files in the program
-- **application.py**: This is the main app file and containsthe Flask-SocketIO backend for the app.
+- **application.py**: This is the main app file and contains the Flask-SocketIO backend for the app.
 - **Procfile**: file required for Heroku
 - **requirements.txt**: list of Python packages installed (also required for Heroku)
 - **templates/**: folder with all HTML files
