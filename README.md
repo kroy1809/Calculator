@@ -1,4 +1,4 @@
-# Standard Calculator Web Application Using Flask-SocketIO & Deployed in Heroku
+# Standard Calculator Web Application Using Flask-SocketIO
 
 ## Introduction
 This is a standard calculator application, implemented using Flask-SocketIO with the app deployed in Heroku.
